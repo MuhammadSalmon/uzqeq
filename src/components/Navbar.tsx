@@ -84,7 +84,7 @@ const Navbar = () => {
     },
     { name: 'Contact', href: '/contact' },
   ];
-
+ 
   return (
     <>
       {/* Scroll Header */}
