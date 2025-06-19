@@ -1,13 +1,21 @@
 import { useRef, useEffect } from "react";
 
+interface LightningProps {
+  hue?: number;
+  xOffset?: number;
+  speed?: number;
+  intensity?: number;
+  size?: number;
+}
+
 const Lightning = ({
   hue = 230,
   xOffset = 0,
   speed = 1,
   intensity = 1,
   size = 1,
-}) => {
-  const canvasRef = useRef(null);
+}: LightningProps) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -114,8 +122,8 @@ const Lightning = ({
     `;
 
     const compileShader = (
-      source,
-      type
+      source: string,
+      type: number
     ) => {
       const shader = gl.createShader(type);
       if (!shader) return null;
