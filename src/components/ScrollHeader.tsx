@@ -40,7 +40,7 @@ const ScrollHeader = () => {
           visible ? 'top-0' : '-top-32'
         }`}
       >
-        <div className="mx-auto px-4">
+        <div className="mx-auto px-4 w-[90%]">
           <div className="flex flex-wrap items-center justify-between py-4">
             {/* Logo and Mobile Menu Button */}
             <div className="flex justify-between items-center w-full lg:w-auto lg:basis-1/3">
@@ -52,7 +52,7 @@ const ScrollHeader = () => {
                 height={50}
                 className="h-10 object-contain"
             />
-            <span className="text-xl font-semibold text-black ml-0 pl-0">UZQEQ</span>
+            <span className="text-xl font-semibold text-white ml-0 pl-0">UZQEQ</span>
             </Link>
               <button 
                 className="lg:hidden text-white text-xl focus:outline-none"

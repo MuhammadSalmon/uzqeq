@@ -23,11 +23,7 @@ interface NavItem {
   }[];
 }
 
-interface CustomNavbarProps {
-  logo: StaticImageData;
-}
-
-const CustomNavbar: React.FC<CustomNavbarProps> = () => {
+const CustomNavbar: React.FC = () => {
   const SCROLL_HEADER_HEIGHT = 60;
   const NAVBAR_HEIGHT = 80;
 
@@ -54,7 +50,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrolled(currentScrollY > 40);
+      setScrolled(currentScrollY > 80);
 
       if (currentScrollY > lastScrollY && currentScrollY > 40) {
         setHeaderVisible(false);

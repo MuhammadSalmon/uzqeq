@@ -30,7 +30,7 @@ const Welcome: React.FC<WelcomeProps> = () => {
       </div>
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 text-white">
+      <div className="container w-[90%] mx-auto px-4 text-white">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left side: Images - Responsive grid */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
