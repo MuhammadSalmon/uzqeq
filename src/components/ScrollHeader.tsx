@@ -7,6 +7,7 @@ import {
   FaEllipsisH 
 } from 'react-icons/fa';
 import ReactCountryFlag from "react-country-flag";
+import Link from 'next/link';
 
 const ScrollHeader = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -35,7 +36,7 @@ const ScrollHeader = () => {
     <div className="relative w-full bg-[#212529]">
       {/* Spacer to prevent content from being hidden behind the header */}
       <header 
-        className={`fixed w-[90%] left-1/2 transform -translate-x-1/2  shadow-md transition-all text-white duration-300 z-50 ${
+        className={`fixed w-full left-1/2 transform -translate-x-1/2  shadow-md transition-all text-white duration-300 z-50 ${
           visible ? 'top-0' : '-top-32'
         }`}
       >
@@ -43,15 +44,16 @@ const ScrollHeader = () => {
           <div className="flex flex-wrap items-center justify-between py-4">
             {/* Logo and Mobile Menu Button */}
             <div className="flex justify-between items-center w-full lg:w-auto lg:basis-1/3">
-              <a href="#" className="inline-block">
-                <Image
-                  src="/logo.png"
-                  alt="Logo"
-                  width={150}
-                  height={50}
-                  className="h-10 w-auto"
-                />
-              </a>
+             <Link href="/" className="flex items-center">
+            <Image
+                src="/logo.png"
+                alt="Logo"
+                width={50}
+                height={50}
+                className="h-10 object-contain"
+            />
+            <span className="text-xl font-semibold text-black ml-0 pl-0">UZQEQ</span>
+            </Link>
               <button 
                 className="lg:hidden text-white text-xl focus:outline-none"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
